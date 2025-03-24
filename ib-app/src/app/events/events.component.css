@@ -1,0 +1,18 @@
+.events-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-list li {
+  background: #f4f4f4;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

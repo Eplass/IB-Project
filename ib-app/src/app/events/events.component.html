@@ -1,0 +1,14 @@
+<div class="events-container">
+  <nav>
+    <a routerLink="/events"></a>
+  </nav>
+  <h1>Upcoming Events</h1>
+  
+  <ul class="event-list">
+    <li *ngFor="let event of events">
+      <h2>{{ event.name }}</h2>
+      <p><strong>Date:</strong> {{ event.date }}</p>
+      <p><strong>Location:</strong> {{ event.location }}</p>
+    </li>
+  </ul>
+</div>

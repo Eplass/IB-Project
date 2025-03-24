@@ -40,11 +40,10 @@ body {
     background-color: #222;
     padding: 15px 20px;
     color: white;
-    position: absolute;
+    /* position: fixed; */
     bottom: 0;
-    width: 100vw;
-    position: absolute;
-    right: 0;
+    width: 100%;
+    right: -1;
     left: 0;
 }
 
