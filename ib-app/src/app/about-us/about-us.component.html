@@ -1,1 +1,16 @@
-<p>about-us works!</p>
+<div class="about-us-container">
+  <h1>About Us</h1>
+  
+  <div class="team-members">
+    <div class="team-member" *ngFor="let member of teamMembers">
+      <div class="member-image">
+        <img [src]="member.imageUrl" [alt]="member.name">
+      </div>
+      <div class="member-info">
+        <h2>{{ member.name }}</h2>
+        <h3>{{ member.title }}</h3>
+        <p>{{ member.bio }}</p>
+      </div>
+    </div>
+  </div>
+</div>
