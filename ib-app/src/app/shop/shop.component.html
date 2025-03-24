@@ -1,0 +1,13 @@
+<div class="shop-container">
+  <nav>
+    <a routerLink="/shop"></a>
+  </nav>
+  <h1>Shop</h1>
+  <div class="items-grid">
+    <div #itemElement class="item-card" *ngFor="let item of items">
+      <img [src]="item.image" [alt]="item.name">
+      <h2>{{ item.name }}</h2>
+      <p>${{ item.price }}</p>
+    </div>
+  </div>
+</div>

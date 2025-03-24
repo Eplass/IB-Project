@@ -4,6 +4,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CountDownComponent } from './countdown/countdown.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ShopComponent } from './shop/shop.component';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-root',
@@ -13,20 +16,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FooterComponent,
     CountDownComponent,
     AboutUsComponent,
+    ShopComponent,
+    ItemDetailComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ib-app';
-  isEventsPage = false;
-
-  constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // Hide components when on the Events page
-        this.isEventsPage = event.url === '/events';
-      }
-    });
-  }
 }
