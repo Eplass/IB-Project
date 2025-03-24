@@ -1,0 +1,9 @@
+<div class="item-detail-container">
+  <h1>{{ item.name }}</h1>
+  <div class="carousel">
+    <img *ngFor="let img of item.images" [src]="img" [alt]="item.name">
+  </div>
+  <p>{{ item.description }}</p>
+  <p><strong>Price: </strong>${{ item.price }}</p>
+  <button (click)="addToCart()">Add to Cart</button>
+</div>
