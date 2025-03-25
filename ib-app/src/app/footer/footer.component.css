@@ -6,6 +6,7 @@
   background-color: #e7c5d7;
   color: #cf76a6;
   margin: 50px;
+  border-radius: 10px;
 }
 
 .social-links {
@@ -64,5 +65,5 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #b82e6c;
 }
