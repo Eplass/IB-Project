@@ -1,28 +1,45 @@
 .count-down-timer {
-    box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
-    text-align: center;
-    background-color: black;
-    color: white;
-    border-radius: 6px;
-    padding: 10px;
-      > p { margin: 5px 0 15px 0; }
-  
-    .wrapper {
-      .description, .times {
-        display: grid;
-        grid-template-columns: repeat(4, calc(25% - 8px));
-        grid-column-gap: 10px;
-      }
-  
-      .description {
-        > p { font: normal 14px sans-serif; }
-      }
-  
-      .times {
-        p {
-          letter-spacing: -5px;
-          font: normal 50px courier, sans-serif;
-        }
+  box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
+  text-align: center;
+  background-color: #f5efe6;
+  color: #d6a3bd;
+  border-radius: 6px;
+  padding: 10px;
+    > p { margin: 5px 0 15px 0; }
+
+  .wrapper {
+    .description, .times {
+      display: grid;
+      grid-template-columns: repeat(4, calc(25% - 8px));
+      grid-column-gap: 10px;
+    }
+
+    .description {
+      > p { font: normal 14px sans-serif; }
+    }
+
+    .times {
+      p {
+        letter-spacing: -5px;
+        font: normal 50px courier, sans-serif;
       }
     }
+  }
+}
+
+/* Buttons with pink highlights */
+.learn-more-btn {
+    background: #ee5ba4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  
+.learn-more-btn:hover {
+    background: #b82e6c;
   }

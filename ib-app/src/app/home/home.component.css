@@ -1,0 +1,106 @@
+/* Light beige background */
+.home-container {
+  background-color: #f5efe6;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Section headers with pink highlights */
+h2 {
+  font-size: 28px;
+  color: #d8a6c1;
+  margin-bottom: 20px;
+}
+
+/* Product List */
+.our-products {
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background: #d8a6c1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.price {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Buttons with pink highlights */
+.shop-all-btn, .read-more-btn {
+  background: #d8a6c1;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.shop-all-btn:hover, .read-more-btn:hover {
+  background: #b82e6c;
+}
+
+/* Who We Are Section */
+.who-we-are {
+  margin-top: 40px;
+}
+
+.who-we-are-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.who-we-are img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Links with pink highlights */
+a {
+  color: #d8a6c1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  

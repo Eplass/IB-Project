@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { Sponsor } from './sponsors.model';
 import { NgFor } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-sponsors',
-  imports: [NgFor],
+  imports: [
+    NgFor,
+    HeaderComponent
+  ],
   templateUrl: './sponsors.component.html',
   styleUrl: './sponsors.component.css'
 })

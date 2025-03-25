@@ -1,10 +1,17 @@
 import { DatePipe, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { Events } from './events.model';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-events',
-  imports: [NgFor, DatePipe],
+  imports: [
+    NgFor, 
+    DatePipe,
+    HeaderComponent,
+    FooterComponent
+  ],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })

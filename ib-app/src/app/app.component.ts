@@ -6,6 +6,7 @@ import { CountDownComponent } from './countdown/countdown.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ShopComponent } from './shop/shop.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
     CountDownComponent,
     AboutUsComponent,
     ShopComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
