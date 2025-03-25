@@ -1,0 +1,15 @@
+<div class="portfolio-container">
+  <h1>Portfolio</h1>
+  <p>Explore our latest collections and stylish pieces.</p>
+  
+  <div class="portfolio-grid">
+    <div class="portfolio-item" *ngFor="let item of fashionItems">
+      <img [src]="item.image" [alt]="item.title" class="portfolio-image">
+      <div class="portfolio-info">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+        <a [routerLink]="item.link" class="view-details-link">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>
