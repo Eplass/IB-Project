@@ -1,9 +1,12 @@
-<div class="item-detail-container">
+<div class="item-details-container">
   <h1>{{ item.name }}</h1>
-  <div class="carousel">
-    <img *ngFor="let img of item.images" [src]="img" [alt]="item.name">
+  
+  <!-- Custom Carousel Component -->
+  <app-carousel [images]="item.images"></app-carousel>
+
+  <div class="item-info">
+    <p><strong>Description:</strong> {{ item.description }}</p>
+    <p><strong>Price:</strong> {{ item.price }}</p>
+    <button class="btn btn-primary">Add to Cart</button>
   </div>
-  <p>{{ item.description }}</p>
-  <p><strong>Price: </strong>${{ item.price }}</p>
-  <button (click)="addToCart()">Add to Cart</button>
 </div>
