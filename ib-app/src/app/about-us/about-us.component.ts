@@ -1,9 +1,13 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-about-us',
-  imports: [NgFor],
+  imports: [
+    NgFor,
+    HeaderComponent
+  ],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.css'
 })

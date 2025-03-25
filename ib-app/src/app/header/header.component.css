@@ -1,15 +1,15 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: fangsong;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #d8a6c1;
     padding: 15px 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
 .header .title a:visited, a:hover, a:active, a:link {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -37,11 +37,25 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1em;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
+}
+
+button {
+    background-color: #d8a6c1;
+    border-color: #d8a6c1;
+    cursor: pointer;
+}
+
+button i {
+    background-color: #d8a6c1;
+    border-color: #d8a6c1;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.3em;
 }

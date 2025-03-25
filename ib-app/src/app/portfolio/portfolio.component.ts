@@ -2,10 +2,15 @@ import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { FashionItem } from './fashion-item.model';
 import { RouterLink } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [NgFor, RouterLink],
+  imports: [
+    NgFor, 
+    RouterLink,
+    HeaderComponent,
+  ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css'
 })

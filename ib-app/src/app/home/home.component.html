@@ -1,0 +1,29 @@
+<div class="home-container">
+    <!-- Our Products Section -->
+    <section class="our-products">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <div class="product" *ngFor="let product of products">
+          <img [src]="product.image" [alt]="product.name">
+          <h3>{{ product.name }}</h3>
+          <p class="price">{{ product.price }}</p>
+        </div>
+      </div>
+      <button class="shop-all-btn" (click)="navigateToShop()">Shop All</button>
+    </section>
+  
+    <!-- Who We Are Section -->
+    <section class="who-we-are">
+      <div class="who-we-are-content">
+        <img src="assets/img/who-we-are.jpg" alt="Fashion Story">
+        <div class="text-content">
+          <h2>Who We Are</h2>
+          <p>
+            We are a brand that blends elegance with contemporary fashion trends. 
+            Our mission is to provide high-quality and stylish apparel that makes you feel confident and beautiful.
+          </p>
+          <button class="read-more-btn" (click)="readMore()">Read More</button>
+        </div>
+      </div>
+    </section>
+  </div>

@@ -2,10 +2,14 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, Renderer2, 
 import { ShopItem } from './shop.model';
 import { Router } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-shop',
-  imports: [NgFor],
+  imports: [
+    NgFor,
+    HeaderComponent,
+  ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })

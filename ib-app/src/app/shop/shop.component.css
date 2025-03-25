@@ -19,6 +19,7 @@
   width: 200px;
   position: relative;
   pointer-events: auto !important;
+  background-color: #e7c5d7;
 }
 
 .item-card img {
@@ -28,4 +29,8 @@
 
 .item-card:hover {
   transform: scale(1.05);
+}
+
+.item-details-container {
+  background-color: #f5efe6;
 }
