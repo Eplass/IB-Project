@@ -1,14 +1,17 @@
 <div class="events-container">
-  <nav>
-    <a routerLink="/events"></a>
-  </nav>
-  <h1>Upcoming Events</h1>
-  
-  <ul class="event-list">
-    <li *ngFor="let event of events">
-      <h2>{{ event.name }}</h2>
-      <p><strong>Date:</strong> {{ event.date }}</p>
-      <p><strong>Location:</strong> {{ event.location }}</p>
-    </li>
-  </ul>
+  <h1>Upcoming Fashion Events</h1>
+  <div class="events-list">
+    <div class="event-card" *ngFor="let event of events">
+      <img [src]="event.image" [alt]="event.title" class="event-image">
+      <div class="event-info">
+        <h2>{{ event.title }}</h2>
+        <p>{{ event.description }}</p>
+        <p><strong>Date:</strong> {{ event.date | date:'fullDate' }}</p>
+        <p><strong>Models:</strong></p>
+        <ul>
+          <li *ngFor="let model of event.modelCredits">{{ model }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
