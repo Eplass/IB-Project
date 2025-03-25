@@ -1,6 +1,7 @@
 .sponsors-container {
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .sponsor-list {
