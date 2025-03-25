@@ -12,9 +12,9 @@ import { NgFor } from '@angular/common';
 export class ShopComponent implements AfterViewInit, OnDestroy {
 
   items: ShopItem[] = [
-    { id: 1, name: 'Smartphone', price: 699, image: 'assets/img/smartphone.jpg' },
-    { id: 2, name: 'Headphones', price: 199, image: 'assets/img/headphones.jpg' },
-    { id: 3, name: 'Laptop', price: 1299, image: 'assets/img/laptop1.jpg' }
+    { id: 1, name: 'Smartphone', price: 699, image: 'assets/items/smartphone.jpg' },
+    { id: 2, name: 'Headphones', price: 199, image: 'assets/items/headphones.jpg' },
+    { id: 3, name: 'Laptop', price: 1299, image: 'assets/items/laptop1.jpg' }
   ];
 
   @ViewChildren('itemElement') itemElements!: QueryList<ElementRef>;
