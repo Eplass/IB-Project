@@ -2,7 +2,7 @@
   box-shadow: 2px 6px 9px 2px rgb(0 0 0 / 20%);
   text-align: center;
   background-color: #f5efe6;
-  color: #d6a3bd;
+  color: #da78ac;
   border-radius: 6px;
   padding: 10px;
     > p { margin: 5px 0 15px 0; }
@@ -29,7 +29,7 @@
 
 /* Buttons with pink highlights */
 .learn-more-btn {
-    background: #ee5ba4;
+    background: #e7c5d7;
     color: white;
     border: none;
     padding: 10px 15px;
