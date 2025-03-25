@@ -12,9 +12,9 @@ import { NgFor } from '@angular/common';
 export class ItemDetailComponent implements OnInit {
   item!: ItemDetail;
   items: ItemDetail[] = [
-    { id: 1, name: 'Smartphone', description: 'A high-end smartphone.', price: 699, images: ['assets/img/smartphone.jpg', 'assets/img/smartphone1.jpg', 'assets/img/smartphone2.jpg', 'assets/img/smartphone3.jpg'] },
-    { id: 2, name: 'Headphones', description: 'Noise-canceling headphones.', price: 199, images: ['assets/img/headphones.jpg', 'assets/img/headphones1.jpg', 'assets/img/headphones2.jpg'] },
-    { id: 3, name: 'Laptop', description: 'A powerful laptop.', price: 1299, images: ['assets/img/laptop.jpg', 'assets/img/laptop1.jpg', 'assets/img/laptop2.jpg'] }
+    { id: 1, name: 'Smartphone', description: 'A high-end smartphone.', price: 699, images: ['assets/items/smartphone.jpg', 'assets/items/smartphone1.jpg', 'assets/items/smartphone2.jpg', 'assets/items/smartphone3.jpg'] },
+    { id: 2, name: 'Headphones', description: 'Noise-canceling headphones.', price: 199, images: ['assets/items/headphones.jpg', 'assets/items/headphones1.jpg', 'assets/items/headphones2.jpg'] },
+    { id: 3, name: 'Laptop', description: 'A powerful laptop.', price: 1299, images: ['assets/items/laptop.jpg', 'assets/items/laptop1.jpg', 'assets/items/laptop2.jpg'] }
   ];
 
   constructor(private route: ActivatedRoute) {}
