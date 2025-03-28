@@ -1,18 +1,22 @@
-<div class="count-down-timer">
-    <!-- <p>Countdown to {{currentTime}}</p> -->
-    <div class="wrapper">
-      <div class="description">
-        <p>Days</p>
-        <p>Hours</p>
-        <p>Minutes</p>
-        <p>Seconds</p>
+<!-- countdown-timer.component.html -->
+ <div class="container">
+    <div class="countdown-container" *ngIf="!showImage">
+        <p class="days">{{ daysLeft }}</p>
+        <p>days till the show</p>
+        <button (click)="navigateToEvents()" class="learn-more-button">Learn More</button>
       </div>
-      <div class="times">
-        <p #days></p>
-        <p #hours></p>
-        <p #minutes></p>
-        <p #seconds></p>
+      
+      <div class="image-container" *ngIf="showImage">
+          <div class="image-wrapper">
+              <img src="assets/img/who-we-are.jpg" alt="Image 1" class="display-image">
+              <div class="separator"></div>
+              <img src="assets/fashion/streetwear.jpg" alt="Image 2" class="display-image">
+              <div class="separator"></div>
+              <img src="assets/fashion/summer-collection.jpg" alt="Image 3" class="display-image">
+            </div>
       </div>
-    </div>
-    <button class="learn-more-btn">Learn More</button>
+
+      <button class="toggle-button" (click)="toggleDisplay()">
+          <i class="fa" [ngClass]="showImage ? 'fa-circle-chevron-left' : 'fa-circle-chevron-right'"></i>
+      </button>      
 </div>
