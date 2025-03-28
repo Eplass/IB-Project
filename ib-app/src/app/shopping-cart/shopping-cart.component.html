@@ -1,0 +1,13 @@
+<div class="cart-container" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+  <div class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-badge" *ngIf="cartItems.length > 0">{{ cartItems.length }}</span>
+  </div>
+  <div class="cart-dropdown" *ngIf="showDropdown">
+    <div *ngIf="cartItems.length === 0">No items in cart</div>
+    <div *ngFor="let item of cartItems; let i = index" class="cart-item">
+      <span>{{ item.name }}</span>
+      <button (click)="removeItem(i)">Remove</button>
+    </div>
+  </div>
+</div>
