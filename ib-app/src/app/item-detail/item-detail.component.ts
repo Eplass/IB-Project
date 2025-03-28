@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemDetail } from './item-detail.model';
 import { ActivatedRoute } from '@angular/router';
 import { CarouselComponent } from '../carousel/carousel.component';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -17,14 +18,15 @@ export class ItemDetailComponent implements OnInit {
     { id: 3, name: 'Laptop', description: 'A powerful laptop.', price: '$1299', images: ['assets/items/laptop.jpg', 'assets/items/laptop1.jpg', 'assets/items/laptop2.jpg'] }
   ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private cartService: CartService) {}
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.item = this.items.find(item => item.id === id)!;
   }
 
-  addToCart() {
-    alert(`${this.item.name} has been added to your cart!`);
+  addToCart(item: ItemDetail) {
+    this.cartService.addItem(item);
+    // window.alert(`${item.name} has been added to your cart!`);
   }
 }
