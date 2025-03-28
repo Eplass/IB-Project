@@ -1,47 +1,41 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { DatePipe, NgClass, NgIf } from '@angular/common';
+import { Component,  OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-countdown',
-  imports: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [
+    NgIf,
+    NgClass,
+    DatePipe
+  ],
+  schemas: [],
   templateUrl: './countdown.component.html',
   styleUrl: './countdown.component.css'
 })
-export class CountDownComponent implements AfterViewInit {
-  date: any;
-  now: any;
-  targetDate: any = new Date(2026, 12, 1);
-  targetTime: any = this.targetDate.getTime();
-  difference!: number;
-  months: Array<string> = ["January", "February", "March", "April",
-  "May", "June", "July", "August", "September", "October", "November", "December"];
+export class CountDownComponent implements OnInit {
+  targetDate: string = '2025-10-05';
+  daysLeft: number = 0;
+  showImage: boolean = false;
+
+  constructor(private router: Router) {}
   
-  // Template literals is ideal for this scenario
-  currentTime: any = this.months[this.targetDate.getMonth()] +
-  ' ' + this.targetDate.getDate() + ', ' + this.targetDate.getFullYear();
-  
-  @ViewChild("days", { static: true }) days!: ElementRef;
-  @ViewChild("hours", { static: true }) hours!: ElementRef;
-  @ViewChild("minutes", { static: true }) minutes!: ElementRef;
-  @ViewChild("seconds", { static: true }) seconds!: ElementRef;
-  
-  ngAfterViewInit() {
-    setInterval(() => {
-      this.tickTock();
-      this.difference = this.targetTime - this.now;
-      this.difference = this.difference / (1000 * 60 * 60 * 24);
-      !isNaN(this.days.nativeElement.innerText)
-        ? (this.days.nativeElement.innerText = Math.floor(this.difference))
-        : (this.days.nativeElement.innerHTML = "<img src='https://i.gifer.com/VAyR.gif' />");
-      }, 1000);
+  ngOnInit() {
+    this.updateCountdown();
+  }
+
+  updateCountdown() {
+    const target = new Date(this.targetDate).getTime();
+    const today = new Date().getTime();
+    const difference = target - today;
+    this.daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
   }
   
-  tickTock() {
-    this.date = new Date();
-    this.now = this.date.getTime();
-    this.days.nativeElement.innerText = Math.floor(this.difference);
-    this.hours.nativeElement.innerText = 23 - this.date.getHours();
-    this.minutes.nativeElement.innerText = 60 - this.date.getMinutes();
-    this.seconds.nativeElement.innerText = 60 - this.date.getSeconds();
+  toggleDisplay() {
+    this.showImage = !this.showImage;
+  }
+
+  navigateToEvents() {
+    this.router.navigate(['/events']);
   }
 }
